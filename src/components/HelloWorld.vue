@@ -26,10 +26,7 @@ export default {
             .then(function(resp){
                 h.data=resp.data;
             }).catch(function(errr){
-                h.data=errr.respon
-                
-                
-                se;
+                h.data=errr.response;
             });
         }
     },
