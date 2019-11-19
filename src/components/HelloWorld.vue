@@ -20,13 +20,13 @@ export default {
         }
     },
     methods: {
-     
         login(){
             var h=this;
             axios.post(`http://127.0.0.1:8000/api/v1/login?email=${this.em}&password=${this.pass}`)
             .then(function(resp){
-                h.data=resp.data;
-                localStorage.setItem("token",resp.data.token);
+                h.data=resp.data; 
+               // localStorage.setItem("token",`${resp.data.token}`);
+                document.cookie = `token=${resp.data.token}`;
             }).catch(function(errr){
                 h.data=errr.response;
             });

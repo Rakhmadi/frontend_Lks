@@ -47,15 +47,6 @@ export default {
                 g.data=err.response;
             });
         },
-        login(){
-            var h=this;
-            axios.post(`http://127.0.0.1:8000/api/v1/login?email=${this.em}&password=${this.pass}`)
-            .then(function(resp){
-                h.data=resp.data;
-            }).catch(function(errr){
-                h.data=errr.response;
-            });
-        }
     },
 
 }
